@@ -8,24 +8,16 @@
 
 $size = $_POST['length'];
 
-if($size > 0) {
+session_start();
 
-    session_start();
+for($i = 0; $i < $size; $i++) {
 
-    for($i = 0; $i < $size; $i++) {
-
-        $randArray[$i] = rand(1, 1000);
-    }
-
-    sort($randArray);
-
-    $_SESSION['randarray'] = $randArray;
-
-    header("Location: sessionPrint.php");
-    die();
+    $randArray[$i] = rand(1, 1000);
 }
 
-else{
-    header("Location: form.php");
-    die();
-}
+sort($randArray);
+
+$_SESSION['randarray'] = $randArray;
+
+header("Location: sessionPrint.php");
+die();

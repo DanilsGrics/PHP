@@ -8,8 +8,8 @@
 
 <center>
     <form action="procArray.php" method="post">
-        <p>Length of array (1 - 100):<br /><input type="text" pattern="[0-9]" step="1" name="length" /></p>
-        <!-- pattern="[1-100]" and step="1" to allow integer values only -->
+        <p>Length of array (1 - 999):<br /><input type="text" pattern="[1-9]{1}[0-9]{0,2}" name="length" /></p>
+        <!-- pattern="[1-9]{1}[0-9]{0,2}" to allow positive (1 - 999) values only -->
         <p><input type="submit" value="Submit"></p>
     </form>
 </center>
